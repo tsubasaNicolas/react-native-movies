@@ -30,9 +30,8 @@ export default function LoginScreen({navigation}) {
               //  console.log(res.data.data.payload);
                 navigation.navigate("Home", {id:"idPelicula"});
                 const datos = await res.data.data
-              
                 setUserContext(datos)
-               // console.log(userContext)
+             
            
             })
             .catch((error) => alert("credenciales erróneas"))
@@ -101,6 +100,7 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         marginLeft: 20,
+        color:"white"
       },
       loginBtn:
  {
