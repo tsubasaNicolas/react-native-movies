@@ -1,34 +1,20 @@
-import React, {useContext} from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import React from 'react';
+import {View, Text, ScrollView} from 'react-native';
 
 import PremiereMovies from '../components/PremiereMovies';
 import PopularMovies from '../components/PopularMovies';
-import { UserContext } from '../context/UserContext';
-
+import MeInfo from '../components/MeInfo';
 
 export default function HomeScreen() {
-  const [userContext, setUserContext] = useContext(UserContext)
+  return (
+    <ScrollView>
+      <MeInfo />
 
- return  (
-       <ScrollView>
-         <Text style={{ textAlign:"center", 
-                        fontSize:28, 
-                        backgroundColor:"#196F3D", 
-                        color:"white", 
-                        height:100
-                        }}>Welcome</Text>
-          <View>
-           
-          <PremiereMovies/>
+      <View>
+        <PremiereMovies />
 
-          <PopularMovies/>
-
-        
-         
-      
-        </View>
-      
-       </ScrollView>
-        )
-  
+        <PopularMovies />
+      </View>
+    </ScrollView>
+  );
 }
